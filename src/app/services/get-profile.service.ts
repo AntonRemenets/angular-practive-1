@@ -12,4 +12,8 @@ export class GetProfileService {
   getTestAccounts() {
     return this.http.get<IProfile[]>(`${this.apiUrl}account/test_accounts`)
   }
+
+  getMe() {
+    return this.http.get<IProfile>(`${this.apiUrl}account/me`)
+  }
 }
